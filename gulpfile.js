@@ -1,4 +1,3 @@
-
 // Declare global scope variables.
 const gulp = require('gulp') // load the gulp library
 const sass = require('gulp-sass') // load the gulp-sass compiler library
