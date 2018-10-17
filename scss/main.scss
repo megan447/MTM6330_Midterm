@@ -1,3 +1,5 @@
+// values
+$bgcolor: #c2b59b;
 // Baseline
 html {
   box-sizing: border-box;
@@ -36,6 +38,47 @@ article {
 }
 
 // My code
+#popup {
+  position: fixed;
+  width: 90%;
+  height: 70%;
+  margin-top: 5%;
+  margin-left: 5%;
+  box-shadow: 5px 5px 5px gray;
+  background-color: $bgcolor;
+  z-index: 99;
+  animation: 1s scale;
+  @keyframes scale {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  #close {
+    background-color: gray;
+    color: white;
+    float: right;
+  }
+  img {
+    width: 80%;
+    float: left;
+    box-shadow: 5px 5px 5px gray;
+  }
+  p {
+    clear: left;
+    color: darkslategrey;
+    font-size: 1.2rem;
+    font-family: Chalkduster;
+    margin-top: 45%;
+    margin-left: 0.5em;
+  }
+}
+.hidden {
+  display: none;
+}
 #container {
   margin: 0 auto;
   // width: 568px;
@@ -45,21 +88,40 @@ article {
     background-image: url("../../imgs/Tropical-Stream_s.jpg");
     background-size: 100% 100%;
     #toptop {
+      display: flex;
       width: 100%;
       height: 50px;
-      background-color: #c2b59b;
+      background-color: $bgcolor;
+      justify-content: space-between;
+      align-items: center;
+      #logo {
+        height: 45px;
+        float: left;
+        img {
+          height: 45px;
+        }
+      }
+      .social {
+        height: 40px;
+        img {
+          height: 40px;
+        }
+      }
     }
     #top {
       width: 100%;
       height: 100px;
     }
+    @mixin padding($value: 1em) {
+      padding-bottom: $value;
+      padding-left: $value;
+      padding-right: $value;
+    }
     h1 {
       font-family: Chalkduster;
       font-size: 1em;
       margin-top: -2.5em;
-      padding-bottom: 1em;
-      padding-left: 1em;
-      padding-right: 1em;
+      @include padding();
     }
   }
   #navbar {
@@ -100,10 +162,13 @@ article {
       font-family: Noteworthy;
       text-shadow: 3px 3px 3px gray;
     }
+    .btn {
+      margin-bottom: 1em;
+    }
     table {
       width: 70%;
       height: 200px;
-      background-color: #c2b59b;
+      background-color: $bgcolor;
       font-family: Chalkduster;
       font-size: 0.8em;
       margin: 0 auto;
@@ -118,7 +183,7 @@ article {
     .contact {
       width: 50%;
       height: 200px;
-      background-color: #c2b59b;
+      background-color: $bgcolor;
       font-family: Chalkduster;
       margin: 0 auto;
       padding: 1em;
@@ -128,7 +193,7 @@ article {
     }
     #portfolio {
       display: flex;
-      width: 80%;
+      width: 100%;
       height: 70%;
       margin: 0 auto;
       flex-direction: row;
@@ -142,21 +207,26 @@ article {
         padding: 2px;
         margin: 14px;
         box-shadow: 5px 5px 5px 3px gray;
-        background-color: #c2b59b;
+        background-color: $bgcolor;
+        text-decoration: none;
+        img {
+          height: 90px;
+          margin: 0 auto;
+        }
+        p {
+          font-size: 1em;
+          margin-top: 0.5em;
+        }
       }
       :hover {
         opacity: 0.6;
-      }
-      img {
-        height: 100px;
-        margin: 0 auto;
+        cursor: pointer;
       }
     }
   }
   footer {
     width: 100%;
-    height: 100px;
-    background-color: #c2b59b;
+    background-color: $bgcolor;
     #footer {
       display: flex;
       flex-direction: column;
@@ -173,6 +243,10 @@ article {
           color: black;
         }
       }
+    }
+    p {
+      text-align: center;
+      font-size: 0.5em;
     }
   }
 }
@@ -216,6 +290,46 @@ article {
   }
 
   // My code
+  #popup {
+    position: fixed;
+    width: 90%;
+    height: 80%;
+    margin-left: 5%;
+    margin-top: 10%;
+    box-shadow: 10px 10px 10px gray;
+    background-color: $bgcolor;
+    z-index: 99;
+    animation: 1s scale;
+    @keyframes scale {
+      0% {
+        transform: scale(0.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    #close {
+      background-color: gray;
+      color: white;
+      float: right;
+    }
+    img {
+      width: 100%;
+      float: left;
+      box-shadow: 5px 5px 5px gray;
+    }
+    p {
+      color: darkslategrey;
+      font-size: 1.5rem;
+      font-family: Noteworthy;
+      margin-left: 0.5em;
+      margin-top: 37%;
+    }
+  }
+  .hidden {
+    display: none;
+  }
   #container {
     margin: 0 auto;
     height: 100%;
@@ -223,10 +337,24 @@ article {
     header {
       background-image: none;
       #toptop {
-        float: top;
+        display: flex;
+        justify-content: space-between;
         width: 100%;
         height: 50px;
-        background-color: #c2b59b;
+        background-color: $bgcolor;
+        #logo {
+          height: 45px;
+          float: left;
+          img {
+            height: 45px;
+          }
+        }
+        .social {
+          height: 45px;
+          img {
+            height: 45px;
+          }
+        }
       }
       #top {
         background-image: url("../../imgs/Tropical-Stream_s.jpg");
@@ -292,10 +420,14 @@ article {
         text-align: left;
         margin: 1em;
       }
+      .btn {
+        float: left;
+        margin-left: 1em;
+      }
       table {
         width: 50%;
         height: 200px;
-        background-color: #c2b59b;
+        background-color: $bgcolor;
         font-family: Chalkduster;
         font-size: 1.2em;
         margin: 0 auto;
@@ -303,14 +435,16 @@ article {
         margin-bottom: 15px;
         box-shadow: 5px 5px 5px 3px gray;
         text-align: left;
+        clear: both;
         td:first-child {
           width: 40%;
+          padding-left: 1em;
         }
       }
       .contact {
         width: 50%;
         height: 200px;
-        background-color: #c2b59b;
+        background-color: $bgcolor;
         font-family: Chalkduster;
         margin: 0 auto;
         padding: 1em;
@@ -320,7 +454,7 @@ article {
       }
       #portfolio {
         display: flex;
-        width: 80%;
+        width: 95%;
         height: 70%;
         margin: 0 auto;
         flex-direction: row;
@@ -334,21 +468,25 @@ article {
           padding: 2px;
           margin: 14px;
           box-shadow: 5px 5px 5px 3px gray;
-          background-color: #c2b59b;
+          background-color: $bgcolor;
+          text-decoration: none;
+          img {
+            height: 150px;
+            margin: 0 auto;
+          }
+          p {
+            text-align: center;
+            font-size: 1.5em;
+          }
         }
         :hover {
           opacity: 0.6;
-        }
-        img {
-          height: 200px;
-          margin: 0 auto;
         }
       }
     }
     footer {
       width: 100%;
-      height: 100px;
-      background-color: #c2b59b;
+      background-color: $bgcolor;
       #footer {
         display: flex;
         flex-direction: column;
@@ -365,6 +503,10 @@ article {
             color: black;
           }
         }
+      }
+      p {
+        text-align: center;
+        font-size: 0.7em;
       }
     }
   }

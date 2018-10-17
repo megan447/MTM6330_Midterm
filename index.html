@@ -7,16 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Lu's portfolio</title>
   <link rel="stylesheet" href="./css/min/main.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
 </head>
 
 <body>
+  <div id="popup" class="hidden"></div>
   <div id="container">
     <header>
       <div id="toptop">
-        <a class="social" href="">
-          <img src="./imgs/" alt="">
-        </a>
-        <a class="social" href=""></a>
+        <div id="logo">
+          <img src="./imgs/logo/round.png" alt="">
+        </div>
+        <div class="social">
+          <a target="_blank" href="https://www.facebook.com/lu.xie.50767">
+            <img src="./imgs/ball_facebook_icon_128.png" alt="">
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/lu-xie-08b5b1154/">
+            <img src="./imgs/linkedin-icon.png" alt="">
+          </a>
+        </div>
       </div>
       <div id="top"></div>
       <h1>Hi, welcome to Lu’s personal
@@ -39,7 +48,8 @@
     </nav>
     <main>
       <div class="block">
-        <p id="about"> About me</p>
+        <p id="about" onclick="test"> About me</p>
+        <a class="btn btn-info btn-lg" target="_blank" href="./files/resumeLu design.docx">Click to see my Resume</a>
         <table action="">
           <tr>
             <td>Name:</td>
@@ -83,24 +93,30 @@
       <div class="block">
         <p> Portfolio</p>
         <div id="portfolio">
-          <a href="" class="flex-item">
-            <img src="./imgs/Tattoos_Watercolor_Butterflies_Tatts_grande.jpg" alt="">
+          <a href="https://github.com/megan447" target="_blank" class="flex-item">
+            <img src="./imgs/GitHub.jpg" alt="">
+            <p>My GitHub website</p>
           </a>
-          <a href="" class="flex-item">
+          <button id="one" class="flex-item">
+            <img src="./imgs/portfolios/ATBI_discover.png" alt="">
+            <p>ATBI_discover website</p>
+          </button>
+          <button id="two" class="flex-item">
             <img src="./imgs/Tattoos_Watercolor_Butterflies_Tatts_grande.jpg" alt="">
-          </a>
-          <a href="" class="flex-item">
+            <p>ATBI_discover website</p>
+          </button>
+          <button id="three" class="flex-item">
             <img src="./imgs/Tattoos_Watercolor_Butterflies_Tatts_grande.jpg" alt="">
-          </a>
-          <a href="" class="flex-item">
+            <p>ATBI_discover website</p>
+          </button>
+          <button id="four" class="flex-item">
             <img src="./imgs/Tattoos_Watercolor_Butterflies_Tatts_grande.jpg" alt="">
-          </a>
-          <a href="" class="flex-item">
+            <p>ATBI_discover website</p>
+          </button>
+          <button id="five" class="flex-item">
             <img src="./imgs/Tattoos_Watercolor_Butterflies_Tatts_grande.jpg" alt="">
-          </a>
-          <a href="" class="flex-item">
-            <img src="./imgs/Tattoos_Watercolor_Butterflies_Tatts_grande.jpg" alt="">
-          </a>
+            <p>ATBI_discover website</p>
+          </button>
         </div>
       </div>
       <img class="huabian" src="./imgs/huabian.png" alt="">
@@ -138,8 +154,15 @@
           <a href="#contact">Contact</a>
         </li>
       </ul>
+      <div id="policy">
+        <p>Copyright © 2018 Lu Xie. All Rights Reserved.</p>
+      </div>
     </footer>
   </div>
 </body>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="./index.js"></script>
 
 </html>
